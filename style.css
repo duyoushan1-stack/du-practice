@@ -23,27 +23,29 @@ table{
     td, th{
         position: relative;
         border: 1px solid #000;
-        padding: 5px;
+        padding: 2px;
     }
     .table-header th{
         background-color: #f0f0f0;
-        padding: 5px;
     }
 }
-/* 大欄位 */
+/* 老師區域 */
+.teacher{
+    padding: 18px 0;
+}
+/* 寬欄位 */
 .layout-lg{
     width: 100px;
     max-width: 100px;
 }
-/* 老師區域 */
-.teacher{
-    padding-bottom: 30px;
-}
-/* 大文字間距 */
+/* 高欄位&大文字間距 */
 .space-lg{
     letter-spacing: 30px;
     max-height: 60px;
     height: 60px;
+    &.no-letter-space{
+        letter-spacing: 0;
+    }                           
 }
 /* 垂直文字 */
 .vertical-txt{
@@ -89,6 +91,11 @@ table{
 }
 @media screen and (max-width: 1024px) {
     table {
+        table-layout: fixed;
         width: 90%;
+    }
+    .layout-lg{
+        width: auto;
+        max-width: auto;
     }
 }
