@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Extended"
+      rel="stylesheet"
+      nonce=""
+    />
+    <link rel="stylesheet" href="../reset.css" />
+    <link rel="stylesheet" href="form.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>表單練習</title>
+  </head>
+  <body>
+    <main>
+      <section class="headline">
+        <div class="container btm-line">
+          <h1>F2E02 表單練習</h1>
+          <p class="description mt-3! text-sm">
+            僅供新尖兵 F2E02 表單切版練習作業
+          </p>
+        </div>
+        <div class="container btm-line flex flex-row justify-between">
+          <div class="left-side">
+            <p class="text-sm font-semibold text-[#5e5e5e]">
+              duyoushan1@gmail.com
+              <a
+                href="https://accounts.google.com/AccountChooser?continue=https://docs.google.com/forms/d/e/1FAIpQLSeRMAUDqY6GEPiHotfXZQLvGOQgB1nLfxA_TW-uwlC5vb8CWQ/viewform&service=wise"
+                target="_blank"
+                class="font-normal text-[#7438d2]! underline!"
+                >切換帳戶</a
+              >
+            </p>
+            <div class="img-wrap flex items-center gap-3!">
+              <img
+                src="../images/unshared.png"
+                alt="未共用的項目"
+                class="w-6! translate-y-1/4 opacity-60"
+              />
+              <p class="text-sm mt-2! text-[#5e5e5e]">未共用的項目</p>
+            </div>
+          </div>
+          <div class="right-side">
+            <img
+              src="../images/icloud.png"
+              alt="雲端圖片"
+              class="w-6! opacity-60"
+            />
+          </div>
+        </div>
+        <div class="container pb-4!">
+          <p class="text-sm text-[#db372d]">* 表示必填問題</p>
+        </div>
+      </section>
+      <form
+        action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeRMAUDqY6GEPiHotfXZQLvGOQgB1nLfxA_TW-uwlC5vb8CWQ/formResponse"
+        method="post"
+      >
+        <section class="p-6! flex flex-col">
+          <label for="name" class="mb-4!"
+            >姓名 <span class="text-[#db372d]">*</span></label
+          >
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="您的回答"
+            class="text-sm! h-10! w-[50%]"
+            required
+          />
+        </section>
+        <section class="p-6! flex flex-col">
+          <label for="email" class="mb-4!"
+            >信箱 <span class="text-[#db372d]">*</span></label
+          >
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="您的回答"
+            class="text-sm! h-10! w-[50%]"
+            required
+          />
+        </section>
+        <section class="p-6! flex flex-col">
+          <label for="birthday" class="mb-4!">生日</label>
+          <p class="text-xs text-[#757575]">日期</p>
+          <input
+            type="date"
+            id="birthday"
+            name="birthday"
+            class="text-sm! h-10! md:w-[20%] w-[50%]"
+          />
+        </section>
+        <section class="p-6! flex flex-col">
+          <label for="smtalk" class="mb-4!">想跟老師說悄悄話</label>
+          <input
+            type="text"
+            id="smtalk"
+            name="smtalk"
+            placeholder="您的回答"
+            class="text-sm! h-10! w-[100%]"
+          />
+        </section>
+        <section class="p-6! flex flex-col">
+          <label class="mb-4!">喜歡的顏色 </label>
+          <div class="color-opt flex items-center">
+            <input
+              type="radio"
+              id="yellow"
+              name="color"
+              class="h-10! p-2! pl-0"
+            />
+            <label for="yellow" class="ml-3!">黃色</label>
+          </div>
+          <div class="color-opt flex items-center">
+            <input
+              type="radio"
+              id="green"
+              name="color"
+              class="h-10! p-2! pl-0"
+            />
+            <label for="green" class="ml-3!">綠色</label>
+          </div>
+          <div class="color-opt flex items-center">
+            <input type="radio" id="red" name="color" class="h-10! p-2! pl-0" />
+            <label for="red" class="ml-3!">紅色</label>
+          </div>
+        </section>
+        <section class="p-6! flex flex-col">
+          <label class="mb-4!">喜歡吃的飲食類型</label>
+          <div class="food-opt flex items-center">
+            <input
+              type="checkbox"
+              id="chinese"
+              name="food"
+              class="h-9! p-2! pl-0"
+            />
+            <label for="chinese" class="ml-3!">中式</label>
+          </div>
+          <div class="food-opt flex items-center">
+            <input
+              type="checkbox"
+              id="italian"
+              name="food"
+              class="h-9! p-2! pl-0"
+            />
+            <label for="italian" class="ml-3!">義式</label>
+          </div>
+          <div class="food-opt flex items-center">
+            <input
+              type="checkbox"
+              id="japanese"
+              name="food"
+              class="h-9! p-2! pl-0"
+            />
+            <label for="japanese" class="ml-3!">日式</label>
+          </div>
+          <div class="food-opt flex items-center">
+            <input
+              type="checkbox"
+              id="korean"
+              name="food"
+              class="h-9! p-2! pl-0"
+            />
+            <label for="korean" class="ml-3!">韓式</label>
+          </div>
+          <div class="food-opt flex items-center">
+            <input
+              type="checkbox"
+              id="american"
+              name="food"
+              class="h-9! p-2! pl-0"
+            />
+            <label for="american" class="ml-3!">美式</label>
+          </div>
+          <div class="food-opt flex items-center">
+            <input
+              type="checkbox"
+              id="thai"
+              name="food"
+              class="h-9! p-2! pl-0"
+            />
+            <label for="thai" class="ml-3!">泰式</label>
+          </div>
+        </section>
+        <section class="p-6! flex flex-col">
+          <label class="mb-4!"
+            >最想去的國家 (使用 optgroup 將選項分為不同洲)</label
+          >
+          <select
+            name="country"
+            id="country"
+            class="border! border-[#dadada]! p-2! pl-4! rounded-sm! min-w-[112px] max-w-[176px] cursor-pointer!"
+          >
+            <option disabled selected>選擇</option>
+            <optgroup label="亞洲">
+              <option value="taiwan">台灣</option>
+              <option value="japanese">日本</option>
+              <option value="korean">韓國</option>
+            </optgroup>
+            <optgroup label="歐洲">
+              <option value="german">德國</option>
+              <option value="british">英國</option>
+            </optgroup>
+            <optgroup label="美洲">
+              <option value="canada">加拿大</option>
+              <option value="american">美國</option>
+            </optgroup>
+          </select>
+        </section>
+        <div class="form-submit flex flex-row place-content-between pb-[10px]!">
+          <button
+            type="submit"
+            class="bg-[#673ab7]! text-white! px-6! rounded-sm! w-[100px] h-[36px]"
+          >
+            提交
+          </button>
+          <button type="reset" class="text-[#673ab7]! h-[36px]">
+            清除表單
+          </button>
+        </div>
+      </form>
+    </main>
+    <footer class="w-[640px] mx-auto!">
+      <div class="mt-2!">
+        <p class="text-xs text-[rgba(0,0,0,.66)] mt-2">
+          請勿利用 Google 表單送出密碼。
+        </p>
+      </div>
+      <div class="flex flex-col gap-3 items-center justify-center my-4!">
+        <p class="text-xs text-[rgba(0,0,0,.66)]">
+          這份表單是在 五倍紅寶石程式資訊教育股份有限公司 中建立。 -
+          <a href="" target="_blank" class="underline!">聯絡表單擁有者</a>
+        </p>
+        <p class="text-xs text-[rgba(0,0,0,.66)]">
+          這份表單很可疑嗎？
+          <a
+            href="https://drive.google.com/u/0/abuse?id=AKkXjoydXWY0mgYIjdBkcdDZLucty17BSF7IBJtYLVLaa39SegSoJEHHs-07XbfRApdQoJAK6ILK0OitJ556aac:0&docurl=https://docs.google.com/forms/d/e/1FAIpQLSeRMAUDqY6GEPiHotfXZQLvGOQgB1nLfxA_TW-uwlC5vb8CWQ/viewform"
+            target="_blank"
+            class="underline!"
+            >報告</a
+          >
+        </p>
+      </div>
+      <div class="flex flex-row gap-1 items-center justify-center my-6!">
+        <a
+          href="https://workspace.google.com/products/forms/?utm_source=product&utm_medium=forms_logo&utm_campaign=forms"
+          class="flex flex-row gap-1 items-center"
+        >
+          <img
+            src="https://www.gstatic.com/images/branding/googlelogo/svg/googlelogo_dark_clr_74x24px.svg"
+            alt="google icon"
+            class="opacity-55"
+          />
+          <span class="text-[22.1px]! opacity-55">表單</span>
+        </a>
+      </div>
+    </footer>
+  </body>
+</html>
