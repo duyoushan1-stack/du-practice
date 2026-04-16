@@ -1,39 +1,45 @@
-body{
-    background-color: #f0ebf8;
-    font-family: 'docs-Roboto', Helvetica, Arial, sans-serif;
+body {
+  background-color: #f0ebf8;
+  font-family: 'docs-Roboto', Helvetica, Arial, sans-serif;
+  interpolate-size: allow-keywords;
 }
-h1{
-    font-size: 24pt; /* 32px */
-    line-height: 135%; /* 43.2px */
+h1 {
+  font-size: 24pt; /* 32px */
+  line-height: 135%; /* 43.2px */
 }
-section{
-    margin: 12px auto;
-    width: 640px;
-    background-color: #fff;
-    border-radius: 8px;
-    border: 1px solid #dadada;
+section {
+  margin: 12px auto;
+  width: 640px;
+  background-color: #fff;
+  border-radius: 8px;
+  border: 1px solid #dadada;
 }
 /* 非選項類型的 input 框 - 動畫*/
-input:not([type="checkbox"]):not([type="radio"]){
-    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
-    /* 設定漸層底線，預設寬度為 0 */
-    background-image: linear-gradient(to right, rgb(103, 58, 183), rgb(103, 58, 183));
-    background-repeat: no-repeat;
-    background-position: center bottom;
-    background-size: 0% 2px;
-    transition: background-size 0.3s ease-in-out;
+input:not([type='checkbox']):not([type='radio']) {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  /* 設定漸層底線，預設寬度為 0 */
+  background-image: linear-gradient(
+    to right,
+    rgb(103, 58, 183),
+    rgb(103, 58, 183)
+  );
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: 0% 2px;
+  transition: background-size 0.3s ease-in-out;
 }
 /* 游標移到 input 框時，底線從中間往兩側長出 */
-input:not([type="checkbox"]):not([type="radio"]):focus{
-    outline: none;
-    background-size: 100% 2px;
+input:not([type='checkbox']):not([type='radio']):focus {
+  outline: none;
+  background-size: 100% 2px;
 }
 /* 調整 checkbox 和 radio 的大小與被選擇時的顏色 */
-input[type="checkbox"],input[type="radio"]{
-    width: 20px;
-    height: 20px;
-    accent-color: rgb(103, 58, 183); /* 當 checked 時背景變紫色 */
-    cursor: pointer;
+input[type='checkbox'],
+input[type='radio'] {
+  width: 20px;
+  height: 20px;
+  accent-color: rgb(103, 58, 183); /* 當 checked 時背景變紫色 */
+  cursor: pointer;
 }
 /* 自訂義 select 的外觀 */
 /* 出處：https://www.injerry.com/blog_view/233 */
@@ -41,7 +47,7 @@ select {
   appearance: base-select;
   height: 48px;
   align-items: center;
-  color: rgba(0,0,0,0.54);
+  color: rgba(0, 0, 0, 0.54);
 }
 select::picker-icon {
   content: url('../images/down-arrow.png');
@@ -53,32 +59,52 @@ select::picker-icon {
 select:open::picker-icon {
   rotate: 180deg;
 }
-button{
-    line-height: 36px;
-    cursor: pointer;
+button {
+  line-height: 36px;
+  cursor: pointer;
 }
-.container{
-    padding: 12px 24px;
+#resetBtn {
+  block-size: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition:
+    background-color 0.2s ease,
+    block-size 0.5s ease,
+    opacity 0.5s ease;
+  padding: 10px;
+}
+#resetBtn:hover {
+  background-color: rgba(113, 113, 113, 0.05);
+}
+.open {
+  block-size: 36px !important;
+  opacity: 1 !important;
+  display: block;
+}
+.container {
+  padding: 12px 24px;
 }
 /* 表單標題區域 */
-.headline{
-    border-top: 10px solid rgb(103, 58, 183);
+.headline {
+  border-top: 10px solid rgb(103, 58, 183);
 }
-.description{
-    font-family: Roboto,Arial,sans-serif;
-    font-size: 11pt; /* 14.666px */
-    line-height: 15pt; /* 20px */
+.description {
+  font-family: Roboto, Arial, sans-serif;
+  font-size: 11pt; /* 14.666px */
+  line-height: 15pt; /* 20px */
 }
-.btm-line{
-    border-bottom: 1px solid #dadada;
+.btm-line {
+  border-bottom: 1px solid #dadada;
 }
 /* 表單提交區域 */
-.form-submit{
-    max-width: 640px;
-    margin: 0 auto;
+.form-submit {
+  max-width: 640px;
+  margin: 0 auto;
 }
 @media screen and (max-width: 768px) {
-    section, footer, .form-submit{
-        width: 90%;
-    }
+  section,
+  footer,
+  .form-submit {
+    width: 90%;
+  }
 }

@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="../reset.css" />
     <link rel="stylesheet" href="form.css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="form.js" defer></script>
     <title>表單練習</title>
   </head>
   <body>
@@ -133,6 +134,11 @@
           <div class="color-opt flex items-center">
             <input type="radio" id="red" name="color" class="h-10! p-2! pl-0" />
             <label for="red" class="ml-3!">紅色</label>
+          </div>
+          <div class="flex justify-end">
+            <button type="reset" id="resetBtn" class="text-[#5F6368]! text-sm!">
+              清除選取的項目
+            </button>
           </div>
         </section>
         <section class="p-6! flex flex-col">
